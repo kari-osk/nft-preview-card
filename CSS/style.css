@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary */
+
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+
+  --Navy-blue: hsl(217, 54%, 11%); /*(main BG)*/
+  --Dark-blue: hsl(216, 50%, 16%); /*(card BG)*/
+  --Line-dark-blue: hsl(215, 32%, 27%); /*(line)*/
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--Navy-blue);
+}
+
+main {
+  width: 326px;
+  height: 544px;
+  background-color: var(--Dark-blue);
+  border-radius: 20px;
+  margin: 151px auto 40px;
+  padding: 23px;
+}
+
+.image-section {
+  position: relative;
+}
+
+.image {
+  width: 280px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.image-section div {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: var(--Cyan);
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-section div:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.image-section div img {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+.image-section div .img-view:hover {
+  opacity: 10;
+}
+
+h1 {
+  color: var(--White);
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+h1:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+p {
+  margin: 12px 0;
+  color: var(--Soft-blue);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+ul {
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul li {
+  display: flex;
+  margin-bottom: 12px;
+  list-style-type: none;
+  align-items: center;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+ul li:first-child {
+  color: var(--Cyan);
+}
+
+ul li:last-child {
+  color: var(--Soft-blue);
+}
+
+ul li img {
+  margin-right: 7px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.data-icon {
+  height: auto;
+}
+
+.line {
+  background-color: var(--Line-dark-blue);
+  height: 1px;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: row;
+  left: 0;
+  margin-top: 10px;
+}
+
+.avatar img {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+  margin: 10px 5px;
+}
+
+.avatar p {
+  padding: 0 10px 20px;
+}
+
+.avatar span {
+  color: var(--White);
+}
+
+.avatar span:hover {
+  cursor: pointer;
+  color: var(--Cyan);
+  font-weight: 400;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(228, 45%, 44%);
+  margin-bottom: 40px;
+}
+
+.attribution a {
+  color: var(--Soft-blue);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
